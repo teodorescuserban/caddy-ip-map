@@ -1,6 +1,6 @@
 module github.com/teodorescuserban/caddy-ip-map
 
-go 1.23.0
+go 1.22.8
 
 require (
 	github.com/caddyserver/caddy/v2 v2.8.4
