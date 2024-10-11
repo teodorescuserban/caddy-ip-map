@@ -21,6 +21,7 @@ import (
 
 func init() {
 	httpcaddyfile.RegisterHandlerDirective("ipmap", parseCaddyfile)
+	httpcaddyfile.RegisterDirectiveOrder("ipmap", "before", "vars")
 }
 
 // parseCaddyfile sets up the map handler from Caddyfile tokens. Syntax:
