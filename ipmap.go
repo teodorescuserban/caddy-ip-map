@@ -29,10 +29,10 @@ func init() {
 	caddy.RegisterModule(Handler{})
 }
 
-// Handler implements a middleware that maps inputs to outputs. Specifically, it
-// compares a source value against the map inputs, and for one that matches, it
-// applies the output values to each destination. Destinations become placeholder
-// names.
+// Handler implements a middleware that maps IP / Subnets as inputs to outputs.
+// Specifically, it compares a source value against the map inputs, and for one
+// that matches, it applies the output values to each destination. Destinations
+// become placeholder names.
 //
 // Mapped placeholders are not evaluated until they are used, so even for very
 // large mappings, this handler is quite efficient.
@@ -44,7 +44,7 @@ type Handler struct {
 	// Destination values should be wrapped in braces, for example, {my_placeholder}.
 	Destinations []string `json:"destinations,omitempty"`
 
-	// Mappings from source values (inputs) to destination values (outputs).
+	// Mappings from IP / Subnet source values (inputs) to destination values (outputs).
 	// The first matching, non-nil mapping will be applied.
 	Mappings []Mapping `json:"mappings,omitempty"`
 
@@ -181,6 +181,7 @@ func checkIpInSubnet(i string, s string) (bool, error) {
 // Mapping describes a mapping from input to outputs.
 type Mapping struct {
 	// The input value to match. Must be distinct from other mappings.
+	// Needs to be an IP / Subnet
 	Input string `json:"input,omitempty"`
 
 	// Upon a match with the input, each output is positionally correlated
