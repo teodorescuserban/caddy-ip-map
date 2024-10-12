@@ -1,7 +1,7 @@
 # caddy-ip-map
 
 ![Build and test](https://github.com/teodorescuserban/caddy-ip-map/actions/workflows/ci.yml/badge.svg)
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#active)
 [![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/teodorescuserban/caddy-ip-map)
 [![Go Report Card](https://goreportcard.com/badge/github.com/teodorescuserban/caddy-ip-map)](https://goreportcard.com/report/github.com/teodorescuserban/caddy-ip-map)
 
